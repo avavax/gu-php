@@ -1,0 +1,103 @@
+.custom-file-label::after {
+	content: 'Загрузить';
+}
+.row img {
+	margin-bottom: 20px;
+	width: 100%;
+	cursor: pointer;
+}
+
+/*Стили подложки и модального окна */
+.overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.modal-wrap {
+    border: 1rem solid #eee; 
+    border-radius: 5rem 0 5rem 0; 
+    position: relative;
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+}
+.modal-img {
+    max-width: 100%;
+    margin-bottom: -4px;
+}
+.modal-close {
+	font-family: serif;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: 200;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: white;
+    text-align: center;
+    color: #111;
+    top: -1.5rem;
+    right: -1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.modal-close:hover {
+    font-size: 0.1rem;
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+/*Стили подложки и модального окна */
+
+/* Стили анимации */
+@-webkit-keyframes move {
+    from {
+        margin-bottom: -10rem;
+        -webkit-transform: rotateY(90deg);
+                transform: rotateY(90deg);
+    }
+
+    to {
+        margin-bottom: 0;
+        -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+    }
+}
+
+@keyframes move {
+    from {
+        margin-bottom: -10rem;
+        -webkit-transform: rotateY(90deg);
+                transform: rotateY(90deg);
+    }
+
+    to {
+        margin-bottom: 0;
+        -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+    }
+}
+
+.modal-animation {
+    -webkit-animation-name: move;
+            animation-name: move;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+/* Блок с анимацией */
