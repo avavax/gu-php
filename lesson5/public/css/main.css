@@ -1,0 +1,9 @@
+.custom-file-label::after {
+	content: 'Загрузить';
+}
+.row img {
+	margin-bottom: 20px;
+	width: 100%;
+	cursor: pointer;
+}
+
