@@ -1,6 +1,6 @@
 <?php 
 
-function getAllProductsFromDb($from = 0, $onPage = 8) {
+function getAllProductsFromDb($from = 0, $onPage = 9) {
     $db = getDb();
 	$sql = "SELECT * FROM goods LIMIT {$from}, {$onPage}";
     $result = getAssocResult($sql);
